@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi carrito</title>
+<!--BOOTSTRAP-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+<!--CSS-->
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <header>
+        <li class="amarillo"><a href="./pasteles.html">Pasteles y postres</a></li>
+        <li class="naranja"><a href="./ayuda.html">Ayuda</a></li>
+        <li class="rojo"><a href="../index.html"><img class="imgLogo" src="../img/Mi proyecto.png" alt="logo" height="90"></a></li>
+        <li class="rosa"><a href="./perro.html">Pasteleria para ellos</a></li>
+        <li class="violeta"><a href="./carrito.html">Mi carrito</a></li>
+    </header>
+
+    <article class="carrito">
+        <div class="pagar1 p20">
+            <img class="torta1" src="../img/torta5.jpg" alt="torta" width="300px">
+            <p class="textoPagar1 m20"><b>Torta Helada Tres Sabores</b>, helado de crema americana, frutos del bosque y dulce de leche artesanal decorado con arandamos. *LIBRE DE GLUTEN, CONTIENE DERIVADOS ANIMAL*</p>
+            <h1 class="precio1"><b>$000</b></h1> 
+        </div>
+        <div class="pagar1 p20">
+            <img class="torta2" src="../img/tortaperro3.jpg" alt="torta" width="300px">
+            <p class="textoPagar2 m20"><b>Torta Primavera Canina</b>, relleno de zanahria, manzana, canela, pera, tomate.</p>
+            <h1 class="precio2"><b>$000</b></h1>
+        </div>
+
+        <div class="alinPagar">
+            <div class="regalo">
+                <form action="#"><input type="radio" name="regalo" value="regalo"> Para regalo</form>
+                <label class="laberViol" for="t">¿Querés que escribamos algo? No completar en caso de NO querer.</label><br>
+                <textarea name="t" cols="30" rows="10"></textarea><br>
+            </div>
+            <img class="imgPagar m20 p20" src="../img/perroComeTorta.jpeg" alt="perroComeTorta" width="300px">
+            <div class="irPagar">
+                <h3>Sub total: $000</h3>
+            </div>    
+        </div>
+
+        
+    </article>
+
+    
+    <footer><!--FOOTER-->
+        <h3 class="redes">Encontranos en redes como:</h3>
+        <a href="#" class="ig"><box-icon type='logo' name='instagram'></box-icon>INSTAGRAM</a>
+        <a href="#" class="tw"><box-icon name='twitter' type='logo' ></box-icon>TWITTER</a>
+        <a href="#" class="face"><box-icon type='logo' name='facebook-circle'></box-icon>FACEBOOK</a>
+        <a href="#" class="ty"><box-icon type='logo' name='youtube'></box-icon>YOUTUBE</a>
+        <h3 class="problema">¿Hay algún problema?</h3>
+        <button class="btnFooter"><a href="./pages/ayuda.html">Ayuda</a></button>
+    </footer>  
+<br>
+
+<!--SCRIPT BOXICONS-->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!--SCRIPT BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
