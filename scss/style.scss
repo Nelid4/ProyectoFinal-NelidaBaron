@@ -4,7 +4,8 @@
 .m20{margin: 20px;}
 body{
     font-family: 'Manrope', sans-serif;
-    background-image: url(../img/fondoo.jpg);
+    /*background-image: url(../img/fondoo.jpg);*/
+    background-image: linear-gradient(to top,white,#fff0d3,white);
     margin: 0%;
 }
 a{text-decoration: none; color: black;}
@@ -70,6 +71,7 @@ li{list-style-type: none;}
     .face{grid-area: face;}
     .yt{grid-area: yt;}
     .btnFooter{grid-area: boton;}
+    .mapa{width: 10%;}
    
    
 /*----------------INDEX---------------*/
@@ -167,7 +169,7 @@ li{list-style-type: none;}
     .flyerMain{grid-area: flyer;}
     .tienda{grid-area: h4;}
     .perroCafe{grid-area: img;}
-    .mapa{width: 1360px; height: 309px;}
+    .mapa{width: 1345px; height: 309px;}
    
    
 /*--------------------PASTELES------------------*/

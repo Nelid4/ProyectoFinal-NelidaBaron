@@ -13,7 +13,8 @@
 
 body {
   font-family: "Manrope", sans-serif;
-  background-image: url(../img/fondoo.jpg);
+  /*background-image: url(../img/fondoo.jpg);*/
+  background-image: linear-gradient(to top, white, #fff0d3, white);
   margin: 0%;
 }
 
@@ -97,6 +98,9 @@ li {
   }
   .btnFooter {
     grid-area: boton;
+  }
+  .mapa {
+    width: 10%;
   }
   /*----------------INDEX---------------*/
   /*----cards-----*/
@@ -230,7 +234,7 @@ li {
     grid-area: img;
   }
   .mapa {
-    width: 1360px;
+    width: 1345px;
     height: 309px;
   }
   /*--------------------PASTELES------------------*/
