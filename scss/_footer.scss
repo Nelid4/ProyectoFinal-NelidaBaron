@@ -1,0 +1,54 @@
+/*-----vista-desktop-------*/
+@media (min-width:1024px){
+    .btnFooter{
+        padding: 5px 120px;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+    footer{
+        background-color: #fc7f033b;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo"
+        "ig tw ayuda"
+        "face yt boton";
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: auto auto auto;
+    }
+    .redes{grid-area: titulo;}
+    .ig{grid-area: ig;}
+    .tw{grid-area: tw;}
+    .problema{grid-area: ayuda;text-align: center;background-color: #fc7f033b;}
+    .face{grid-area: face;}
+    .yt{grid-area: yt;}
+    .btnFooter{grid-area: boton;}
+    .mapa{width: 10%;}
+}
+
+/*-----vista-mobile-------*/
+@media (max-width:768px){
+    .btnFooter{
+        padding: 5px 120px;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+    footer{
+        background-color: #fc7f033b;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo "
+        "ig tw"
+        "face yt"
+        "ayuda ayuda"
+        "boton boton";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .redes{grid-area: titulo;}
+    .ig{grid-area: ig; padding: 10px;}
+    .tw{grid-area: tw; padding: 10px;}
+    .problema{grid-area: ayuda;text-align: center; padding: 10px; background-color: #fc7f033b;}
+    .face{grid-area: face; padding: 10px;}
+    .yt{grid-area: yt; padding: 10px;}
+    .btnFooter{grid-area: boton;}
+}

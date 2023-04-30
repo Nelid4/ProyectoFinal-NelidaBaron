@@ -1,0 +1,100 @@
+    /*-----vista-desktop-------*/
+    @media (min-width:1024px){  
+    .verMas{
+        background-color: $naranja-rojo;
+        border: $naranja-rojo;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 13px;
+        margin: 10px;
+        text-align: center;
+    }
+    .flexCard{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        border-radius: 7px;
+        margin: 10px;
+        text-align: center;
+    }
+    .mainCards{
+        display: grid;
+        grid-template-areas:
+        "card1 card2 card3 card4"
+        "p p p p";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto;
+    }
+    .card1{grid-area: card1; background-color: #a6026c;}
+    .card2{grid-area: card2; background-color: $naranja;}
+    .card3{grid-area: card3; background-color: $rosa;}
+    .card4{grid-area: card4; background-color: $amarillo;}
+    .pCards{grid-area: p;}
+   
+    .imgCard1{position: relative; left: 12px;}
+    .imgCard2{position: relative; left: 21px;}
+    .imgCard3{position: relative; left: 12px;}
+    .imgCard4{position: relative; left: 8px; margin: 17px 1px;}
+   
+    .pCards{
+        border: 10px double $naranja-rojo;
+        background: rgb(255, 223, 168);
+        font-size: 22px;
+        color: $naranja-rojo;
+        text-align: center;
+    }
+}
+
+/*-----vista-mobile-------*/
+    @media (max-width:768px){
+    .verMas{
+        background-color: $naranja-rojo;
+        border: $naranja-rojo;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 13px;
+        margin: 10px;
+        text-align: center;
+    }
+    .flexCard{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        border-radius: 7px;
+        margin: 10px;
+        text-align: center;
+    }
+    .mainCards{
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "p";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .card1{grid-area: card1; background-color: #a6026c; }
+    .card2{grid-area: card2; background-color: $naranja; }
+    .card3{grid-area: card3; background-color: $rosa; }
+    .card4{grid-area: card4; background-color: $amarillo; }
+    .pCards{grid-area: p;}
+
+
+    .imgCard1{position: relative; left: 44px;}
+    .imgCard2{position: relative; left: 52px;}
+    .imgCard3{position: relative; left: 43px;}
+    .imgCard4{position: relative; left: 39px;}
+
+
+    .pCards{
+        border: 10px double $naranja-rojo;
+        background: rgb(255, 223, 168);
+        font-size: 22px;
+        color: $naranja-rojo;
+        text-align: center;
+    }
+}

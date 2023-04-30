@@ -1,150 +1,45 @@
-    /*--------------GENERAL---------------*/
-.p20{padding:20px;}
-.p10{padding: 10px;}
-.m20{margin: 20px;}
+/*------Partials-----*/
+@import "variables";
+@import "header";
+@import "footer";
+@import "cardsIndex";
+@import "pseudoclases";
+/*--------------GENERAL---------------*/
+.p20{padding:$p20;}
+.p10{padding: $p10;}
+.m20{margin: $p20;}
 body{
-    font-family: 'Manrope', sans-serif;
-    /*background-image: url(../img/fondoo.jpg);*/
-    background-image: linear-gradient(to top,white,#fff0d3,white);
+    font-family: $font-body;
+    background-image: linear-gradient(to top,$blanco,#fff0d3,$blanco);
     margin: 0%;
 }
 a{text-decoration: none; color: black;}
 li{list-style-type: none;}
 /*------------------------------------------------------------DESKTOP*/
-/*---header---*/
-@media (min-width:1024px){
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 21.3px;
-    }
-    .amarillo{
-        padding: 45px 42px;
-        background-color: #ffab03;
-    }
-    .naranja{
-        padding: 45px 108px;
-        background-color: #fc7f03;
-    }
-    .rojo{
-        padding: 16px 21px;
-        background-color: #fc3903;
-        border-bottom-left-radius: 63px;
-        border-bottom-right-radius: 63px;
-        position: relative;
-        bottom: 1px;
-    }
-    .rosa{
-        padding: 45px 71px;
-        background-color: #d1024e;
-    }
-    .violeta{
-        padding: 45px 78px;
-        background-color: #a6026c;
-    }
-    .imgLogo{
-        height: 90px;
-    }
-   
-   
-    /*-----footer------*/
-    .btnFooter{
-        padding: 5px 120px;
-        border-radius: 10px;
-        font-size: 25px;
-    }
-    footer{
-        background-color: #fc7f033b;
-        display: grid;
-        grid-template-areas:
-        "titulo titulo titulo"
-        "ig tw ayuda"
-        "face yt boton";
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: auto auto auto;
-    }
-    .redes{grid-area: titulo;}
-    .ig{grid-area: ig;}
-    .tw{grid-area: tw;}
-    .problema{grid-area: ayuda;text-align: center;background-color: #fc7f033b;}
-    .face{grid-area: face;}
-    .yt{grid-area: yt;}
-    .btnFooter{grid-area: boton;}
-    .mapa{width: 10%;}
-   
-   
+@media (min-width:1024px){  
 /*----------------INDEX---------------*/
-    /*----cards-----*/
-   
-    .verMas{
-        background-color: #fc3903;
-        border: #fc3903;
-        padding: 10px;
-        font-size: 20px;
-        border-radius: 13px;
-        margin: 10px;
-        text-align: center;
-    }
-    .flexCard{
-        display: flex;
-        flex-direction: column;
-    }
-    .card{
-        border-radius: 7px;
-        margin: 10px;
-        text-align: center;
-    }
-    .mainCards{
-        display: grid;
-        grid-template-areas:
-        "card1 card2 card3 card4"
-        "p p p p";
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: auto auto;
-    }
-    .card1{grid-area: card1; background-color: #a6026c;}
-    .card2{grid-area: card2; background-color: #fc7f03;}
-    .card3{grid-area: card3; background-color: #d1024e;}
-    .card4{grid-area: card4; background-color: #ffab03;}
-    .pCards{grid-area: p;}
-   
-    .imgCard1{position: relative; left: 12px;}
-    .imgCard2{position: relative; left: 21px;}
-    .imgCard3{position: relative; left: 12px;}
-    .imgCard4{position: relative; left: 8px; margin: 17px 1px;}
-   
-    .pCards{
-        border: 10px double #fc3903;
-        background: rgb(255, 223, 168);
-        font-size: 22px;
-        color: #fc3903;
-        text-align: center;
-    }
-   
-   
     /*-----info general------*/
     .h2izq{
         display: inline-block;
-        background-color: #fc3903;
+        background-color: $naranja-rojo;
         padding-right: 200px;
-        border: 10px solid #fc3903;
-        border-end-end-radius: 30px ;
-        border-top-right-radius: 30px ;
+        border: $p10 solid $naranja-rojo;
+        border-end-end-radius: $p30 ;
+        border-top-right-radius: $p30 ;
         position: relative;
         top: 22px;
     }
     .pMain{
         padding: 19px;
-        border: 2px solid #fc3903;
+        border: 2px solid $naranja-rojo;
     }
     .h2der{
         display: inline-block;
-        background-color: #fc3903;
+        background-color: $naranja-rojo;
         padding-left: 200px;
-        border: 10px solid #fc3903;
-        border-top-left-radius: 30px;
-        border-end-start-radius: 30px;
+        border: $p10 solid $naranja-rojo;
+        border-top-left-radius: $p30;
+        border-end-start-radius: $p30;
         position: relative;
         top: 22px;
         left: 835px;
@@ -164,7 +59,7 @@ li{list-style-type: none;}
     .somos{grid-area: somos;}
     .trabaj{grid-area: trabaj;}
     .videoInfo{grid-area: video; margin: 11px 64px; width: 653px; height: 348px;}
-    .perroTorta{grid-area: perroTorta;    margin: 20px 132px;}
+    .perroTorta{grid-area: perroTorta;    margin: $p20 132px;}
     .lugar{display: flex; grid-area: lugar; flex-direction: column;}
     .flyerMain{grid-area: flyer;}
     .tienda{grid-area: h4;}
@@ -175,10 +70,10 @@ li{list-style-type: none;}
 /*--------------------PASTELES------------------*/
     /*--cards horizontaes---*/
     .botonAgr1{
-        background-color: #ffab03;
-        border: #ffab03;
+        background-color: $amarillo;
+        border: $amarillo;
         padding: 26px;
-        font-size: 20px;
+        font-size: $p20;
         border-radius: 150px;
         text-decoration: none;
         text-align: center;
@@ -196,10 +91,10 @@ li{list-style-type: none;}
     .p1{grid-area: texto1;}
     .botonAgr1{grid-area: boton1;}
    
-    .rosaC{border: 5px solid #d1024e;}
-    .naranjaC{border: 5px solid #fc3903;}
-    .amarilloC{border: 5px solid #fc7f03;}
-    .violetaC{border: 5px solid #a6026c;}
+    .rosaC{border: 5px solid $rosa;}
+    .naranjaC{border: 5px solid $naranja-rojo;}
+    .amarilloC{border: 5px solid $naranja;}
+    .violetaC{border: 5px solid $violeta;}
     .fz20{font-size: 22px;}
    
 
@@ -207,21 +102,21 @@ li{list-style-type: none;}
 /*-----------------PERRO-----------------*/
     /*---card perro----*/
     .botonPerro{
-        background-color: #d1024e;
-        border: #d1024e;
-        font-size: 20px;
+        background-color: $rosa;
+        border: $rosa;
+        font-size: $p20;
         border-radius: 4px;
         padding: 22px;
-        color: white;
+        color: $blanco;
     }
-    .bNaranja{background-color: #fc7f03;}
-    .bVioleta{background-color: #a6026c;}
-    .bRojo{background-color: #fc3903;}
+    .bNaranja{background-color: $naranja;}
+    .bVioleta{background-color: $violeta;}
+    .bRojo{background-color: $naranja-rojo;}
    
     .navP{
-        border: 7px dotted #d1024e;
+        border: 7px dotted $rosa;
         padding: 17px;
-        color: #d1024e;
+        color: $rosa;
     }
     aside{
         align-items: flex-start;
@@ -233,31 +128,31 @@ li{list-style-type: none;}
 /*--------------CARRITO-------------------*/
     /*----ir a pagar---*/
     .pagar1{
-        border: 5px solid #a6026c;
+        border: 5px solid $violeta;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        margin: 10px 50px 1px 160px;
+        margin: $p10 50px 1px 160px;
         background: blanchedalmond;
     }
     .regalo{
         text-align: center;
         display: inline-block;
-        border: 3px solid #a6026c;
-        padding: 10px;
-        border-end-end-radius: 30px;
-        border-bottom-left-radius: 30px;
+        border: 3px solid $violeta;
+        padding: $p10;
+        border-end-end-radius: $p30;
+        border-bottom-left-radius: $p30;
         position: relative;
         left: 114px;
     }
     .irPagar{
         text-align: center;
         display: inline-block;
-        border: 3px solid #a6026c;
-        padding: 10px;
-        border-end-end-radius: 30px;
-        border-bottom-left-radius: 30px;
-        font-size: 20px;
+        border: 3px solid $violeta;
+        padding: $p10;
+        border-end-end-radius: $p30;
+        border-bottom-left-radius: $p30;
+        font-size:$p20;
         position: relative;
         right: 5px;
     }
@@ -270,20 +165,20 @@ li{list-style-type: none;}
    
     .tAyudamos{
         display: inline-block;
-        background-color: #fc7f03;
+        background-color: $naranja;
         padding-right: 200px;
-        border: 7px solid #fc7f03;
-        border-end-end-radius: 30px ;
-        border-top-right-radius: 30px ;
+        border: 7px solid $naranja;
+        border-end-end-radius: $p30 ;
+        border-top-right-radius: $p30;
     }
    
     .p-f{
         display: inline-block;
-        background-color: #fc7f03;
+        background-color: $naranja;
         padding-left: 200px;
-        border: 7px solid #fc7f03;
-        border-top-left-radius: 30px;
-        border-end-start-radius: 30px;
+        border: 7px solid $naranja;
+        border-top-left-radius: $p30;
+        border-end-start-radius: $p30;
         position: relative;
         left: 91px;
     }
@@ -307,102 +202,27 @@ li{list-style-type: none;}
     }
 }
 
-
-
-
 /*----------------------------------------------------------MOBILE*/
-
-
 @media (max-width:768px){
-    /*---header---*/
-header{
-    display: grid;
-    grid-template-areas:
-    "pasteles"
-    "ayuda"
-    "logo"
-    "perro"
-    "carrito";
-    grid-template-columns: 100%;
-    grid-template-rows: 22px 22px 22px 22px 22px ;
-    font-size: 15px;
-    }
-   
-    .amarillo{ grid-area: pasteles;
-        padding: 3px 5px;
-        background-color: #ffab03;
-    }
-    .naranja{ grid-area: ayuda;
-        padding: 3px 5px;
-        background-color: #fc7f03;
-    }
-    .rojo{ grid-area: logo;
-        padding: 3px 5px;
-        background-color: #fc3903
-        ;
-    }
-    .imgLogo{
-        height: 79px;
-        position: relative;
-        left: 189px;
-        bottom: 30px;
-    }
-    .rosa{ grid-area: perro;
-        padding: 3px 5px;
-        background-color: #d1024e;
-    }
-    .violeta{ grid-area: carrito;
-        padding: 3px 5px;
-        background-color: #a6026c;
-    }
-
-
-    /*-----footer------*/
-    .btnFooter{
-        padding: 5px 120px;
-        border-radius: 10px;
-        font-size: 25px;
-    }
-    footer{
-        background-color: #fc7f033b;
-        display: grid;
-        grid-template-areas:
-        "titulo titulo "
-        "ig tw"
-        "face yt"
-        "ayuda ayuda"
-        "boton boton";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto auto auto;
-    }
-    .redes{grid-area: titulo;}
-    .ig{grid-area: ig; padding: 10px;}
-    .tw{grid-area: tw; padding: 10px;}
-    .problema{grid-area: ayuda;text-align: center; padding: 10px; background-color: #fc7f033b;}
-    .face{grid-area: face; padding: 10px;}
-    .yt{grid-area: yt; padding: 10px;}
-    .btnFooter{grid-area: boton;}
-
-
 /*---------------AYUDA-------------*/
     .tAyudamos{
         display: inline-block;  
-        background-color: #fc7f03;
+        background-color: $naranja;
         padding-right: 200px;
-        border: 7px solid #fc7f03;
-        border-end-end-radius: 30px ;
-        border-top-right-radius: 30px ;
+        border: 7px solid $naranja;
+        border-end-end-radius: $p30;
+        border-top-right-radius: $p30 ;
         position: relative;
         right: 29px;
     }
    
     .p-f{
         display: inline-block;
-        background-color: #fc7f03;
+        background-color: $naranja;
         padding-left: 234px;
-        border: 1px solid #fc7f03;
-        border-top-left-radius: 30px;
-        border-end-start-radius: 30px;
+        border: 1px solid $naranja;
+        border-top-left-radius: $p30;
+        border-end-start-radius: $p30;
         position: relative;
         left: 24px;
     }
@@ -424,81 +244,28 @@ header{
    
    
 /*----------------INDEX---------------*/
-    /*----cards-----*/
-   
-    .verMas{
-        background-color: #fc3903;
-        border: #fc3903;
-        padding: 10px;
-        font-size: 20px;
-        border-radius: 13px;
-        margin: 10px;
-        text-align: center;
-    }
-    .flexCard{
-        display: flex;
-        flex-direction: column;
-    }
-    .card{
-        border-radius: 7px;
-        margin: 10px;
-        text-align: center;
-    }
-    .mainCards{
-        display: grid;
-        grid-template-areas:
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "p";
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
-    }
-    .card1{grid-area: card1; background-color: #a6026c; }
-    .card2{grid-area: card2; background-color: #fc7f03; }
-    .card3{grid-area: card3; background-color: #d1024e; }
-    .card4{grid-area: card4; background-color: #ffab03; }
-    .pCards{grid-area: p;}
-
-
-    .imgCard1{position: relative; left: 83px;}
-    .imgCard2{position: relative; left: 95px;}
-    .imgCard3{position: relative; left: 83px;}
-    .imgCard4{position: relative; left: 85px;}
-   
-   
-   
-    .pCards{
-        border: 10px double #fc3903;
-        background: rgb(255, 223, 168);
-        font-size: 22px;
-        color: #fc3903;
-        text-align: center;
-    }
-   
     /*-----info general------*/
     .h2izq{
         display: inline-block;
-        background-color: #fc3903;
-        padding-right: 200px;
-        border: 10px solid #fc3903;
-        border-end-end-radius: 30px ;
-        border-top-right-radius: 30px ;
+        background-color: $naranja-rojo;
+        padding-right: 43px;
+        border: 10px solid $naranja-rojo;
+        border-end-end-radius: $p30 ;
+        border-top-right-radius: $p30 ;
         position: relative;
         top: 22px;
     }
     .pMain{
         padding: 19px;
-        border: 2px solid #fc3903;
+        border: 2px solid $naranja-rojo;
     }
     .h2der{
         display: inline-block;
-        background-color: #fc3903;
-        padding-left: 200px;
-        border: 10px solid #fc3903;
-        border-top-left-radius: 30px;
-        border-end-start-radius: 30px;
+        background-color: $naranja-rojo;
+        padding-left: 145px;
+        border: $p10 solid $naranja-rojo;
+        border-top-left-radius: $p30;
+        border-end-start-radius: $p30;
         position: relative;
         top: 22px;
     }
@@ -533,10 +300,10 @@ header{
 /*--------------------PASTELES------------------*/
     /*--cards horizontaes---*/
     .botonAgr1{
-        background-color: #ffab03;
-        border: #ffab03;
+        background-color: $amarillo;
+        border: $amarillo;
         padding: 26px;
-        font-size: 20px;
+        font-size: $p20;
         border-radius: 150px;
         text-decoration: none;
         text-align: center;
@@ -553,10 +320,10 @@ header{
     .p1{grid-area: texto1;}
     .botonAgr1{grid-area: boton1;}
    
-    .rosaC{border: 5px solid #d1024e;}
-    .naranjaC{border: 5px solid #fc3903;}
-    .amarilloC{border: 5px solid #fc7f03;}
-    .violetaC{border: 5px solid #a6026c;}
+    .rosaC{border: 5px solid $rosa;}
+    .naranjaC{border: 5px solid $naranja-rojo;}
+    .amarilloC{border: 5px solid $naranja;}
+    .violetaC{border: 5px solid $violeta;}
     .fz20{font-size: 22px;}
    
 
@@ -564,21 +331,21 @@ header{
 /*-----------------PERRO-----------------*/
     /*---card perro----*/
     .botonPerro{
-        background-color: #d1024e;
-        border: #d1024e;
-        font-size: 20px;
+        background-color:$rosa;
+        border: $rosa;
+        font-size: $p20;
         border-radius: 4px;
         padding: 22px;
-        color: white;
+        color: $blanco;
     }
-    .bNaranja{background-color: #fc7f03;}
-    .bVioleta{background-color: #a6026c;}
-    .bRojo{background-color: #fc3903;}
+    .bNaranja{background-color: $naranja;}
+    .bVioleta{background-color: $violeta;}
+    .bRojo{background-color: $naranja-rojo;}
    
     .navP{
-        border: 7px dotted #d1024e;
+        border: 7px dotted $rosa;
         padding: 9px;
-        color: #d1024e;
+        color: $rosa;
     }
     aside{
         display: flex;
@@ -590,41 +357,36 @@ header{
 /*--------------CARRITO-------------------*/
     /*----ir a pagar---*/
     .pagar1{
-        border: 5px solid #a6026c;
+        border: 5px solid $violeta;
         display: flex;
         background: blanchedalmond;
         flex-direction: column;
         align-items: center;
-        margin: 10px;
+        margin: $p10;
     }
    
     .regalo{
         text-align: center;
         display: inline-block;
-        border: 3px solid #a6026c;
-        border-end-end-radius: 30px;
-        border-bottom-left-radius: 30px;
+        border: 3px solid $violeta;
+        border-end-end-radius: $p30;
+        border-bottom-left-radius: $p30;
     }
     .irPagar{
-        border: 3px solid #a6026c;
-        padding: 10px;
-        border-end-end-radius: 30px;
-        border-bottom-left-radius: 30px;
-        margin-bottom: 20px;
+        border: 3px solid $violeta;
+        padding: $p10;
+        border-end-end-radius: $p30;
+        border-bottom-left-radius: $p30;
+        margin-bottom: $p20;
     }
     .alinPagar{
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-   
+    
     .imgPagar{
         margin: 2px;
     }
-
-
-
-
-
 
     }

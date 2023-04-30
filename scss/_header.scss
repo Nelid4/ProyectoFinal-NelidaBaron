@@ -1,0 +1,78 @@
+/*-----vista-mobile-------*/
+@media (max-width:768px){
+    /*---header---*/
+header{
+    display: grid;
+    grid-template-areas:
+    "pasteles"
+    "ayuda"
+    "logo"
+    "perro"
+    "carrito";
+    grid-template-columns: 100%;
+    grid-template-rows: 22px 22px 22px 22px 22px ;
+    font-size: 15px;
+    }
+    .amarillo{ grid-area: pasteles;
+        padding: 3px 5px;
+        background-color: $amarillo;
+    }
+    .naranja{ grid-area: ayuda;
+        padding: 3px 5px;
+        background-color: $naranja;
+    }
+    .rojo{ grid-area: logo;
+        padding: 3px 5px;
+        background-color: $naranja-rojo;
+    }
+    .imgLogo{
+        height: 79px;
+        position: relative;
+        left: 189px;
+        bottom: 30px;
+    }
+    .rosa{ grid-area: perro;
+        padding: 3px 5px;
+        background-color: $rosa;
+    }
+    .violeta{ grid-area: carrito;
+        padding: 3px 5px;
+        background-color: $violeta;
+    }
+}
+
+/*-----vista-desktop-------*/
+@media (min-width:1024px){
+    header{
+        display: flex;
+        justify-content: flex-start;
+        font-size: 21.3px;
+    }
+    .amarillo{
+        padding: 45px 42px;
+        background-color: $amarillo;
+    }
+    .naranja{
+        padding: 45px 108px;
+        background-color: $naranja;
+    }
+    .rojo{
+        padding: 16px 21px;
+        background-color: $naranja-rojo;
+        border-bottom-left-radius: 63px;
+        border-bottom-right-radius: 63px;
+        position: relative;
+        bottom: 1px;
+    }
+    .rosa{
+        padding: 45px 71px;
+        background-color: $rosa;
+    }
+    .violeta{
+        padding: 45px 78px;
+        background-color: $violeta;
+    }
+    .imgLogo{
+        height: 90px;
+    }
+}

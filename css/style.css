@@ -1,39 +1,54 @@
-/*--------------GENERAL---------------*/
-.p20 {
-  padding: 20px;
+@charset "UTF-8";
+/*------Partials-----*/ /*----colores----*/
+/*-------tamaños---------*/
+/*--------fuentes----------*/
+/*-----vista-mobile-------*/
+@media (max-width: 768px) {
+  /*---header---*/
+  header {
+    display: grid;
+    grid-template-areas: "pasteles" "ayuda" "logo" "perro" "carrito";
+    grid-template-columns: 100%;
+    grid-template-rows: 22px 22px 22px 22px 22px;
+    font-size: 15px;
+  }
+  .amarillo {
+    grid-area: pasteles;
+    padding: 3px 5px;
+    background-color: #ffab03;
+  }
+  .naranja {
+    grid-area: ayuda;
+    padding: 3px 5px;
+    background-color: #fc7f03;
+  }
+  .rojo {
+    grid-area: logo;
+    padding: 3px 5px;
+    background-color: #fc3903;
+  }
+  .imgLogo {
+    height: 79px;
+    position: relative;
+    left: 189px;
+    bottom: 30px;
+  }
+  .rosa {
+    grid-area: perro;
+    padding: 3px 5px;
+    background-color: #d1024e;
+  }
+  .violeta {
+    grid-area: carrito;
+    padding: 3px 5px;
+    background-color: #a6026c;
+  }
 }
-
-.p10 {
-  padding: 10px;
-}
-
-.m20 {
-  margin: 20px;
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  /*background-image: url(../img/fondoo.jpg);*/
-  background-image: linear-gradient(to top, white, #fff0d3, white);
-  margin: 0%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style-type: none;
-}
-
-/*------------------------------------------------------------DESKTOP*/
-/*---header---*/
+/*-----vista-desktop-------*/
 @media (min-width: 1024px) {
   header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
     font-size: 21.3px;
   }
   .amarillo {
@@ -63,7 +78,9 @@ li {
   .imgLogo {
     height: 90px;
   }
-  /*-----footer------*/
+}
+/*-----vista-desktop-------*/
+@media (min-width: 1024px) {
   .btnFooter {
     padding: 5px 120px;
     border-radius: 10px;
@@ -102,8 +119,52 @@ li {
   .mapa {
     width: 10%;
   }
-  /*----------------INDEX---------------*/
-  /*----cards-----*/
+}
+/*-----vista-mobile-------*/
+@media (max-width: 768px) {
+  .btnFooter {
+    padding: 5px 120px;
+    border-radius: 10px;
+    font-size: 25px;
+  }
+  footer {
+    background-color: rgba(252, 127, 3, 0.231372549);
+    display: grid;
+    grid-template-areas: "titulo titulo " "ig tw" "face yt" "ayuda ayuda" "boton boton";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .redes {
+    grid-area: titulo;
+  }
+  .ig {
+    grid-area: ig;
+    padding: 10px;
+  }
+  .tw {
+    grid-area: tw;
+    padding: 10px;
+  }
+  .problema {
+    grid-area: ayuda;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(252, 127, 3, 0.231372549);
+  }
+  .face {
+    grid-area: face;
+    padding: 10px;
+  }
+  .yt {
+    grid-area: yt;
+    padding: 10px;
+  }
+  .btnFooter {
+    grid-area: boton;
+  }
+}
+/*-----vista-desktop-------*/
+@media (min-width: 1024px) {
   .verMas {
     background-color: #fc3903;
     border: #fc3903;
@@ -171,6 +232,113 @@ li {
     color: #fc3903;
     text-align: center;
   }
+}
+/*-----vista-mobile-------*/
+@media (max-width: 768px) {
+  .verMas {
+    background-color: #fc3903;
+    border: #fc3903;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 13px;
+    margin: 10px;
+    text-align: center;
+  }
+  .flexCard {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    border-radius: 7px;
+    margin: 10px;
+    text-align: center;
+  }
+  .mainCards {
+    display: grid;
+    grid-template-areas: "card1" "card2" "card3" "card4" "p";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .card1 {
+    grid-area: card1;
+    background-color: #a6026c;
+  }
+  .card2 {
+    grid-area: card2;
+    background-color: #fc7f03;
+  }
+  .card3 {
+    grid-area: card3;
+    background-color: #d1024e;
+  }
+  .card4 {
+    grid-area: card4;
+    background-color: #ffab03;
+  }
+  .pCards {
+    grid-area: p;
+  }
+  .imgCard1 {
+    position: relative;
+    left: 44px;
+  }
+  .imgCard2 {
+    position: relative;
+    left: 52px;
+  }
+  .imgCard3 {
+    position: relative;
+    left: 43px;
+  }
+  .imgCard4 {
+    position: relative;
+    left: 39px;
+  }
+  .pCards {
+    border: 10px double #fc3903;
+    background: rgb(255, 223, 168);
+    font-size: 22px;
+    color: #fc3903;
+    text-align: center;
+  }
+}
+a:hover {
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 1s;
+}
+
+/*--------------GENERAL---------------*/
+.p20 {
+  padding: 20px;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-image: linear-gradient(to top, #ffffff, #fff0d3, #ffffff);
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*------------------------------------------------------------DESKTOP*/
+@media (min-width: 1024px) {
+  /*----------------INDEX---------------*/
   /*-----info general------*/
   .h2izq {
     display: inline-block;
@@ -288,7 +456,7 @@ li {
     font-size: 20px;
     border-radius: 4px;
     padding: 22px;
-    color: white;
+    color: #ffffff;
   }
   .bNaranja {
     background-color: #fc7f03;
@@ -383,86 +551,6 @@ li {
 }
 /*----------------------------------------------------------MOBILE*/
 @media (max-width: 768px) {
-  /*---header---*/
-  header {
-    display: grid;
-    grid-template-areas: "pasteles" "ayuda" "logo" "perro" "carrito";
-    grid-template-columns: 100%;
-    grid-template-rows: 22px 22px 22px 22px 22px;
-    font-size: 15px;
-  }
-  .amarillo {
-    grid-area: pasteles;
-    padding: 3px 5px;
-    background-color: #ffab03;
-  }
-  .naranja {
-    grid-area: ayuda;
-    padding: 3px 5px;
-    background-color: #fc7f03;
-  }
-  .rojo {
-    grid-area: logo;
-    padding: 3px 5px;
-    background-color: #fc3903;
-  }
-  .imgLogo {
-    height: 79px;
-    position: relative;
-    left: 189px;
-    bottom: 30px;
-  }
-  .rosa {
-    grid-area: perro;
-    padding: 3px 5px;
-    background-color: #d1024e;
-  }
-  .violeta {
-    grid-area: carrito;
-    padding: 3px 5px;
-    background-color: #a6026c;
-  }
-  /*-----footer------*/
-  .btnFooter {
-    padding: 5px 120px;
-    border-radius: 10px;
-    font-size: 25px;
-  }
-  footer {
-    background-color: rgba(252, 127, 3, 0.231372549);
-    display: grid;
-    grid-template-areas: "titulo titulo " "ig tw" "face yt" "ayuda ayuda" "boton boton";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-  .redes {
-    grid-area: titulo;
-  }
-  .ig {
-    grid-area: ig;
-    padding: 10px;
-  }
-  .tw {
-    grid-area: tw;
-    padding: 10px;
-  }
-  .problema {
-    grid-area: ayuda;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(252, 127, 3, 0.231372549);
-  }
-  .face {
-    grid-area: face;
-    padding: 10px;
-  }
-  .yt {
-    grid-area: yt;
-    padding: 10px;
-  }
-  .btnFooter {
-    grid-area: boton;
-  }
   /*---------------AYUDA-------------*/
   .tAyudamos {
     display: inline-block;
@@ -498,78 +586,11 @@ li {
     background-color: rgba(252, 127, 3, 0.231372549);
   }
   /*----------------INDEX---------------*/
-  /*----cards-----*/
-  .verMas {
-    background-color: #fc3903;
-    border: #fc3903;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 13px;
-    margin: 10px;
-    text-align: center;
-  }
-  .flexCard {
-    display: flex;
-    flex-direction: column;
-  }
-  .card {
-    border-radius: 7px;
-    margin: 10px;
-    text-align: center;
-  }
-  .mainCards {
-    display: grid;
-    grid-template-areas: "card1" "card2" "card3" "card4" "p";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-  }
-  .card1 {
-    grid-area: card1;
-    background-color: #a6026c;
-  }
-  .card2 {
-    grid-area: card2;
-    background-color: #fc7f03;
-  }
-  .card3 {
-    grid-area: card3;
-    background-color: #d1024e;
-  }
-  .card4 {
-    grid-area: card4;
-    background-color: #ffab03;
-  }
-  .pCards {
-    grid-area: p;
-  }
-  .imgCard1 {
-    position: relative;
-    left: 83px;
-  }
-  .imgCard2 {
-    position: relative;
-    left: 95px;
-  }
-  .imgCard3 {
-    position: relative;
-    left: 83px;
-  }
-  .imgCard4 {
-    position: relative;
-    left: 85px;
-  }
-  .pCards {
-    border: 10px double #fc3903;
-    background: rgb(255, 223, 168);
-    font-size: 22px;
-    color: #fc3903;
-    text-align: center;
-  }
   /*-----info general------*/
   .h2izq {
     display: inline-block;
     background-color: #fc3903;
-    padding-right: 200px;
+    padding-right: 43px;
     border: 10px solid #fc3903;
     border-end-end-radius: 30px;
     border-top-right-radius: 30px;
@@ -583,7 +604,7 @@ li {
   .h2der {
     display: inline-block;
     background-color: #fc3903;
-    padding-left: 200px;
+    padding-left: 145px;
     border: 10px solid #fc3903;
     border-top-left-radius: 30px;
     border-end-start-radius: 30px;
@@ -681,7 +702,7 @@ li {
     font-size: 20px;
     border-radius: 4px;
     padding: 22px;
-    color: white;
+    color: #ffffff;
   }
   .bNaranja {
     background-color: #fc7f03;
