@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Tenés dudas? Estamos listos para ayudarte con lo que necesites">
+    <meta name="keywords" content="ayuda,help,pregunta,contacto">
     <title>Ayuda</title>
 <!--BOOTSTRAP-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -11,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+<!--CSS AOS-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -91,14 +95,14 @@
 </figure>
 <br><br>
 
-<div class="finA">
+<div class="finA" data-aos="fade-up" data-aos-duration="3000">
     <b>También podés contactarnos por acá:</b>
     <h3>55 5555-5555</h3>
     <a href="#">mydogscoffee@gmail.com</a>
 </div>
 
 <br><br>
-    <footer><!--FOOTER-->
+    <footer data-aos="fade-up" data-aos-anchor-placement="center-bottom"><!--FOOTER-->
         <h3 class="redes">Encontranos en redes como:</h3>
         <a href="#" class="ig"><box-icon type='logo' name='instagram'></box-icon>INSTAGRAM</a>
         <a href="#" class="tw"><box-icon name='twitter' type='logo' ></box-icon>TWITTER</a>
@@ -111,7 +115,11 @@
 
 <!--SCRIPT BOXICONS-->
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
+<!--AOS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <!--SCRIPT BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
