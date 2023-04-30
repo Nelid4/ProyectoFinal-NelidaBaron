@@ -1,44 +1,38 @@
 /*-----vista-mobile-------*/
 @media (max-width:768px){
-    /*---header---*/
-header{
-    display: grid;
-    grid-template-areas:
-    "pasteles"
-    "ayuda"
-    "logo"
-    "perro"
-    "carrito";
-    grid-template-columns: 100%;
-    grid-template-rows: 22px 22px 22px 22px 22px ;
-    font-size: 15px;
-    }
-    .amarillo{ grid-area: pasteles;
-        padding: 3px 5px;
+    .amarillo {
         background-color: $amarillo;
+        display: inline-block;
+        width: 100%;
     }
-    .naranja{ grid-area: ayuda;
-        padding: 3px 5px;
+    .naranja {
         background-color: $naranja;
+        display: inline-block;
+        width: 100%;
     }
-    .rojo{ grid-area: logo;
-        padding: 3px 5px;
+    .rojo {
         background-color: $naranja-rojo;
+        border-radius: 25px;
+        display: inline-block;
+        width: 100%;
     }
-    .imgLogo{
-        height: 79px;
-        position: relative;
-        left: 189px;
-        bottom: 30px;
-    }
-    .rosa{ grid-area: perro;
-        padding: 3px 5px;
+    .rosa {
         background-color: $rosa;
+        display: inline-block;
+        width: 100%;
     }
-    .violeta{ grid-area: carrito;
-        padding: 3px 5px;
+    .violeta {
         background-color: $violeta;
+        display: inline-block;
+        width: 100%;
     }
+    .imgLogo {
+        height: 90px;
+    }
+    .bg-dark {background-image: url(../img/fondoo.jpg)!important; }
+    .navbar-toggler{background-color:$naranja-rojo !important ;}
+
+header{display: none;}
 }
 
 /*-----vista-desktop-------*/
@@ -75,4 +69,5 @@ header{
     .imgLogo{
         height: 90px;
     }
+    .headerMobile{display: none;}
 }
